@@ -1,0 +1,39 @@
+<!--pages/personalinformation/personalinformation.wxml-->
+<scroll-view scroll-y="true" class="{{scrollViewStyle}}">
+  <view class="personal-head">    
+    <view class="head-image">
+      <image class="order-figure" src="{{userInfo.avatarUrl}}"></image>
+      <view class='rz'>{{userInfo.authStatus == '0' ? '未认证' : '已认证'}}</view>
+    </view>
+    <view class='info'>
+      <view class="balance">
+        <view class="balance-title">余额</view>
+        <view class="num-content"><view class='num'>{{userInfo.walletBalance}} </view> <view>元</view> </view>
+      </view>
+      <view class="score">
+        <view class="score-title">积分</view>
+        <view class="num-content">
+          <view class='num'>
+          {{userInfo.score}}
+          </view>
+          <view>分</view>          
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="personal-body">
+    <navigator url="../mywallet/mywallet" class="navigator">
+      <view class="navigator-text">  我的钱包 </view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+    <navigator url="../myscore/myscore" class="navigator">
+      <view class="navigator-text">我的积分</view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+    <navigator url="../authentication/authentication" class="navigator">
+      <view class="navigator-text">当前身份</view>
+      <view class="navigator-value">{{currentIdentify}}</view>
+      <view class="navigator-arrow"></view>
+    </navigator>
+  </view> 
+</scroll-view>

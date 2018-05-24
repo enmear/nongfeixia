@@ -1,0 +1,37 @@
+{
+  "pages":[  
+    "pages/index/index",    
+    "pages/authentication/authentication",    
+    "pages/logs/logs",
+    "pages/farmerindex/farmerindex",
+    "pages/orderpublish/orderpublish",
+    "pages/orderlist/orderlist",
+    "pages/personalinformation/personalinformation",
+    "pages/flyerindex/flyerindex",
+    "pages/dealerindex/dealerindex",
+    "pages/orderdetail/orderdetail",
+    "pages/mywallet/mywallet",
+    "pages/myscore/myscore",
+   
+    "pages/authenticationtype/authenticationtype",
+    "pages/personalauthentication/personalauthentication",
+    "pages/companyauthentication/companyauthentication",
+    "pages/incomerecord/incomerecord",
+    "pages/payrecord/payrecord",
+    "pages/bondrecord/bondrecord",
+    "pages/withdrawals/withdrawals",
+    "pages/modifyname/modifyname",
+    "pages/modifyphone/modifyphone",
+    "pages/modifyaddress/modifyaddress",
+    "pages/requirementList/requirementList",
+    "pages/articlepublish/articlepublish",
+    "pages/flyerorderlist/flyerorderlist",
+    "pages/agreement/agreement"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0ac176",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

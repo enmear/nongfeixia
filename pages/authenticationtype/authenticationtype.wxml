@@ -1,0 +1,18 @@
+<!--pages/authenticationtype/authenticationtype.wxml-->
+<view class="current-identity">
+  <view>当前身份：</view>
+  <view class='name'>{{currentIdentify}}</view>
+</view>
+<view class="button">
+  <button class='btn'  bindtap="personalAuthentication">
+  <view class='iconfont icon-geren1'>
+  </view>
+    <view class='text'>个人认证</view> 
+  </button>
+</view>
+<view class="button">
+  <button class='btn'   bindtap="companyAuthentication">
+  <view class='iconfont icon-qiye'>
+  </view>
+  <view class='text'>公司认证</view> </button>
+</view>

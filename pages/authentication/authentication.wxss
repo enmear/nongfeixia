@@ -1,0 +1,95 @@
+/* pages/authentication/authentication.wxss */
+.authentication-head {
+  display: flex;
+  flex-direction: row;
+  height: 150rpx;
+  margin-top: 40rpx;
+  background: #fff;
+  position: relative
+}
+.head-title{
+  width: 70%;
+  font-size: 30rpx;
+  margin-top: 60rpx;
+  margin-left: 40rpx;
+  color: #666;
+  display: flex
+}
+.head-title .iconfont{
+  font-size: 36rpx;
+  margin-right: 10rpx
+}
+.head-figure{
+  height: 110rpx;
+  width: 110rpx;
+  margin-top: 20rpx;
+  border-radius: 50%
+
+}
+.authentication-head:after{
+  content:'';
+	position:absolute;
+	top:0;
+	width:200%;
+	height:200%;
+	transform:scale(.5);
+	transform-origin:0 0;
+	pointer-events:none;
+	box-sizing:border-box;
+	border:0 solid #e5e5e5;
+	border-bottom-width:1px;
+	left:15px;
+	right:0;
+}
+.authentication-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20rpx 0;
+  position: relative
+}
+.authentication-item:after{
+  content:'';
+	position:absolute;
+	top:0;
+	width:200%;
+	height:200%;
+	transform:scale(.5);
+	transform-origin:0 0;
+	pointer-events:none;
+	box-sizing:border-box;
+	border:0 solid #e5e5e5;
+	border-bottom-width:1px;
+	left:15px;
+	right:0;
+}
+.authentication-item-title{
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  margin-left: 40rpx;
+  color: #333;
+  display: flex
+}
+.authentication-item-title .iconfont{
+  margin-right:10rpx;
+  font-size: 36rpx;
+}
+.authentication-item-content{
+  display: block;
+  font-size: 30rpx;
+  margin-top: 5rpx
+}
+.button-modify{
+  margin-top: 6rpx;
+  display: flex;
+  margin-right: 20rpx
+}
+
+.button-modify .iconfont{
+  color: #ABABAB;
+  margin-top:6rpx;
+  margin-left: 10rpx
+
+}

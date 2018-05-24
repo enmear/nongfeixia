@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#0ac176",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "认证类型",
+  "usingComponents": {
+      "zan-icon": "../../dist/icon/index"
+  }
+}

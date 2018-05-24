@@ -1,0 +1,204 @@
+/* pages/orderdetail/orderdetail.wxss */
+.head-image {
+  width: 100%;
+  height: 340rpx;
+}
+.order-head {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200rpx;
+  border-bottom:1px solid #eee;
+  border-top:1px solid #eee;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 26rpx;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+.icon-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.icon view{
+  margin-top: 20rpx;
+}
+.price {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+}
+.price view {
+  margin-top: 20rpx
+}
+.area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.area view {
+  margin-top: 20rpx
+}
+.order-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  margin-bottom: 60rpx;
+  background: #fff
+}
+.order-body-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #666
+}
+.button-done {
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  font-size: 32rpx;
+}
+
+.button-done-none {
+  display: none
+}
+
+/*mask*/
+.drawer_screen { 
+ width: 100%; 
+ height: 100%; 
+ position: fixed; 
+ top: 0; 
+ left: 0; 
+ z-index: 1000; 
+ background: #000; 
+ opacity: 0.5; 
+ overflow: hidden; 
+} 
+  
+/*content*/
+.drawer_box { 
+ width: 650rpx; 
+ overflow: hidden; 
+ position: fixed; 
+ top: 50%; 
+ left: 0; 
+ z-index: 1001; 
+ background: #FAFAFA; 
+ margin: -150px 50rpx 0 50rpx; 
+ border-radius: 3px; 
+} 
+  
+.drawer_title{ 
+ padding:15px; 
+ font: 18px "microsoft yahei"; 
+ text-align: center; 
+} 
+.drawer_content { 
+ height: 210px; 
+ overflow-y: scroll; /*超出父盒子高度可滚动*/
+} 
+  
+.btn_ok{ 
+ padding: 10px; 
+ font: 15px "microsoft yahei"; 
+ text-align: center; 
+ border-top: 1px solid #E8E8EA; 
+ color: #3CC51F; 
+}
+
+.btn_disabled{ 
+ padding: 10px; 
+ font: 15px "microsoft yahei"; 
+ text-align: center; 
+ border-top: 1px solid #E8E8EA; 
+ color: gray; 
+}
+
+.fly_image {
+  height: 280rpx;
+  margin-top: 20rpx;
+  margin-left: 5%;
+  border-top: 1px solid #E8E8EA; 
+  text-align: center
+}
+
+.fly_image image {
+  width: 240rpx;
+  height: 240rpx;
+  margin-top: 20rpx;
+}
+
+
+.banner{
+  width: 100%;
+  height: 320rpx
+}
+.detail-header{
+  display: flex;
+  position: relative;
+  background: #fff 
+}
+.detail-header .img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  margin-right: 20rpx
+}
+.text-tit{
+  display: flex;
+  flex-direction: column;
+  
+}
+.text-tit .title{
+  font-size: 36rpx
+}
+.text-tit .acreage{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #999;
+}
+.text-tit .price{
+  position: absolute;
+  right: 20rpx;
+  top:0;
+  font-size: 28rpx;
+  color: #666;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end
+
+}
+.text-tit .price .lg-t{
+  font-size: 40rpx; 
+  font-weight: bold;
+  margin-bottom: -4rpx
+}
+.red{
+ color: #f30;
+}
+.bottom-box{
+  position: fixed;
+  bottom:0;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.bottom-box .v-l{
+  margin-top: 10rpx
+}

@@ -1,0 +1,49 @@
+<!--pages/authentication/authentication.wxml-->
+<scroll-view scroll-y="true">  
+  <view class="authentication-head">
+    <view class="head-title">
+      <view class='iconfont icon-touxiang red'></view>
+      <view>头像</view>   
+    </view>
+    <image class="head-figure" src="{{userInfo.avatarUrl}}"></image>
+  </view>
+  <view class="authentication-item" bindtap="modifyName">
+    <view class="authentication-item-title">
+      <view class='iconfont icon-xingming green'></view>
+     <view>姓名</view>  
+     </view>  
+    <view class="button-modify">
+      <view class="authentication-item-content">王小二{{userInfo.realName === null ? "" : userInfo.realName}}</view>
+      <view class="iconfont icon-arr-right-black" ></view>      
+    </view>
+  </view>
+  <view class="authentication-item"  bindtap="modifyPhone">
+    <view class="authentication-item-title">
+     <view class='iconfont icon-shouji blue'></view>
+     <view>手机号码</view>   </view>    
+    <view class="button-modify">
+      <view class="authentication-item-content">{{userInfo.phoneNum === null ? "" : userInfo.phoneNum}}</view>
+      <view class="iconfont icon-arr-right-black"></view>     
+    </view>
+  </view>
+  <view class="authentication-item">
+    <view class="authentication-item-title">
+    <view class='iconfont icon-dizhi orange'></view>
+      <view>常住地址</view>   
+      </view>   
+    <view class="button-modify">
+      <view class="authentication-item-content">{{userInfo.address === null ? "" : userInfo.address}}</view>
+      <view class="iconfont icon-arr-right-black" bindtap="modifyAddress"></view>     
+    </view>
+  </view>
+  <view class="authentication-item"  bindtap="jumpToAuthentication">
+    <view class="authentication-item-title">
+      <view class='iconfont icon-renzheng-copy green'></view>
+       <view>认证</view>  
+     </view>      
+    <view class="button-modify">
+      <view class="authentication-item-content red">{{userInfo.authStatusStr}}</view>
+      <view class="iconfont icon-arr-right-black"></view>     
+    </view>
+  </view>
+</scroll-view>

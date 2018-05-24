@@ -1,0 +1,13 @@
+<!--pages/modifyaddress/modifyaddress.wxml-->
+<view class="input-cell cell">
+  <view class="input-cell-title">
+    <text>常住地址：</text>
+  </view>
+  <view class="input-cell-content">
+    <input placeholder='{{userInfo.authStatus === "0" ? "请填写真实常住地址" : userInfo.address}}' bindinput='addressInput'></input>
+  </view>
+</view>
+
+<view class="button-submit">
+    <button class='btn' bindtap='sumbit'>提交</button>
+  </view>

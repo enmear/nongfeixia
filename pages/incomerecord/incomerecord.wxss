@@ -1,0 +1,5 @@
+/* pages/incomerecord/incomerecord.wxss */
+@import "../common/index.wxss";
+.scorll-view-cell {
+  width: 100%;
+}

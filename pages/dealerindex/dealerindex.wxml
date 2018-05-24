@@ -1,0 +1,21 @@
+<!--pages/dealerindex/dealerindex.wxml-->
+<view class='page'>
+  <view class="{{orderPublish}}">
+    <include src='../orderpublish/orderpublish.wxml' />
+  </view>
+  <view class="{{orderList}}">
+    <include src='../orderlist/orderlist.wxml' />
+  </view>
+  <view class="{{personalInformation}}">
+    <include src="../personalinformation/personalinformation.wxml" />
+  </view>
+  <view class="{{articlePublish}}">
+    <include src="../articlepublish/articlepublish.wxml" />
+  </view>
+<view class="nav-tabs">
+    <view wx:key='{{idx}}' class="tab-list {{currentTab == idx?'active':'default'}}" wx:for="{{tabbar}}" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" capture-bind:tap="swichNav">
+     <image class='img' src="{{currentTab == idx?item.selectedIconPath:item.iconPath}}"></image> 
+    <view>{{item.text}}</view>
+    </view>
+</view>
+</view>

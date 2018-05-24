@@ -1,0 +1,47 @@
+/* pages/mywallet/mywallet.wxss */
+.wallet-head{
+  display: flex;
+  height: 200rpx;
+  flex-direction: column;
+  text-align: center;
+  margin-top:40rpx;
+  margin-bottom: 30rpx;
+  font-size: 30rpx;
+  color:#666 
+}
+.num{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #f30
+}
+.wallet-head view {
+  margin-top:20rpx;
+}
+.btn-group{
+  display: flex;
+  margin: 0 30rpx;
+}
+.button {
+  margin: 0 30rpx;
+  flex:1;
+  margin-bottom: 50rpx;
+  font-size: 32rpx;
+}
+.btn{
+  line-height: 1.4;
+  font-size: 32rpx;
+  color: #666;
+  background: #fff;
+  padding: 30rpx
+}
+
+.button .iconfont{
+
+  font-size: 60rpx
+}
+.button[plain] {
+color:#666;
+border:1px solid #ddd;
+background: #fff
+}
+

@@ -1,0 +1,34 @@
+<!--pages/companyauthentication/companyauthentication.wxml-->
+<scroll-view style='background:#fff' scroll-y="true">
+  <view class="input-cell cell">
+    <view class="input-cell-title">公司名称：</view>
+    <view class="input-cell-content">
+      <input placeholder='{{userInfo.authStatus === "0" ? "请填写公司名称" : userInfo.companyName}}' bindinput='companyNameInput' disabled="{{disabled}}"></input>
+    </view>
+  </view>
+
+  <view class="input-cell cell">
+    <view class="input-cell-title">联系电话：</view>
+    <view class="input-cell-content">
+      <input placeholder='{{userInfo.authStatus === "0" ? "请填写联系电话" : userInfo.phoneNum}}' bindinput='phoneNumInput' disabled="{{disabled}}"></input>
+    </view>
+  </view>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "0" ? "flex" : "none"}}'>请准备公司营业执照进行拍照</view>
+
+  <image class="business-license-image" src="{{companyImageUrl}}" bindtap="choiceImages" wx:if="{{companyImageUrl}}"></image>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "0" ? "flex" : "none"}}'>拍照时请确保营业执照边框完整，字迹清晰，亮度均匀</view>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "4" ? "flex" : "none"}}'>审核失败：{{userInfo.failReason}}</view>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "2" ? "flex" : "none"}}'>认证状态：审核中</view>
+
+  <view class="{{buttonPart}}">
+    <button class='btn-default' bindtap='sumbit'>提交审核</button>
+  </view>
+
+  <view class="{{reAuthButtonPart}}">
+    <button class='btn-default' bindtap='reAuth'>重新认证</button>
+  </view>
+</scroll-view>

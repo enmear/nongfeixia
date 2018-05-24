@@ -1,0 +1,18 @@
+<!--pages/flyerindex/flyerindex.wxml-->
+<view class="{{currentTab == idx?'show':'hidden'}} tab-content" wx:for="{{tabArray}}" wx:for-index="idx" wx:for-item="itemName" wx:key="itemName">
+  <view class="{{orderPublish}}">
+    <include src='../requirementList/requirementList.wxml' />
+  </view>
+  <view class="{{orderList}}">
+    <include src='../flyerorderlist/flyerorderlist.wxml' />
+  </view>
+  <view class="{{personalInformation}}">
+    <include src="../personalinformation/personalinformation.wxml" />
+  </view>
+</view>
+<view class="nav-tabs">
+    <view wx:key='{{idx}}' class="tab-list {{currentTab == idx?'active':'default'}}" wx:for="{{tabbar}}" wx:for-index="idx" wx:for-item="item" data-current="{{idx}}" capture-bind:tap="swichNav">
+     <image class='img' src="{{currentTab == idx?item.selectedIconPath:item.iconPath}}"></image> 
+    <view>{{item.text}}</view>
+    </view>
+</view>

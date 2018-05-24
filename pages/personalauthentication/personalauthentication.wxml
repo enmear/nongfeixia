@@ -1,0 +1,49 @@
+<!--pages/personalauthentication/personalauthentication.wxml-->
+<scroll-view style='background:#fff' scroll-y="true">
+  <view class="input-cell cell">
+    <view class="input-cell-title">真实姓名：</view>
+    <view class="input-cell-content">
+      <input placeholder='{{userInfo.authStatus === "0" ? "请填写真实姓名" : userInfo.realName}}' bindinput='realNameInput' disabled="{{disabled}}"></input>
+    </view>
+  </view>
+
+  <view class="input-cell cell">
+    <view class="input-cell-title">身份证号：</view>
+    <view class="input-cell-content">
+      <input placeholder='{{userInfo.authStatus === "0" ? "请填写身份证号" : userInfo.idNum}}' bindinput='idNumInput' disabled="{{disabled}}"></input>
+    </view>
+  </view>
+
+  <view class="input-cell cell">
+    <view class="input-cell-title">联系电话：</view>
+    <view class="input-cell-content">
+      <input placeholder='{{userInfo.authStatus === "0" ? "请填写联系电话" : userInfo.phoneNum}}' bindinput='phoneNumInput' disabled="{{disabled}}"></input>
+    </view>
+  </view>
+
+  <view class="tips"  style='display:{{userInfo.authStatus === "0" ? "flex" : "none"}}'>请拍摄本人有效二代身份证</view>
+  <view class="id-photo">
+    <view class="id-photo-half">
+      <image class="id-photo-image" src="{{idImageFrontUrl}}" id="0" bindtap="choiceImages" wx:if="{{idImageFrontUrl}}"></image>
+      <view class="">正面</view>
+    </view>
+    <view class="id-photo-half">
+      <image class="id-photo-image" src="{{idImageBackUrl}}" id="1" bindtap="choiceImages" wx:if="{{idImageBackUrl}}"></image>
+      <view class="">反面</view>
+    </view>
+  </view>
+  <view class="tips" style='display:{{userInfo.authStatus === "0" ? "flex" : "none"}}'>拍照时请确保身份证边框完整，字迹清晰，亮度均匀</view>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "4" ? "flex" : "none"}}'>审核失败：{{userInfo.failReason}}</view>
+
+  <view class="tips" style='display:{{userInfo.authStatus === "2" ? "flex" : "none"}}'>认证状态：审核中</view>
+
+  <view class="{{buttonPart}}">
+    <button  class='btn-default'   bindtap='sumbit'>提交审核</button>
+  </view>
+  <view  class='agree'><text>提交审核代表你同意 </text><navigator url='../agreement/agreement' class='green'>《农飞侠飞防服务协议》</navigator></view>
+
+  <view class="{{reAuthButtonPart}}">
+    <button class='btn-default' bindtap='reAuth'>重新认证</button>
+  </view>
+</scroll-view>

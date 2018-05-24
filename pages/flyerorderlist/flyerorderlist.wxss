@@ -1,0 +1,60 @@
+/* pages/flyerOrderList/flyerOrderList.wxss */
+@import "../common/index.wxss";
+.scorll-view-cell-orderlist {
+  width: 100%;
+  height: 1000rpx;
+}
+.image-content {
+  text-align: center;
+}
+.image-content view {
+  font-size: 25rpx;
+}
+.order-figure {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.order-content {
+  display: flex;
+  width: 300rpx;
+  flex-direction: column;
+  margin-left: 40rpx;
+  font-size: 25rpx;
+}
+
+.order-status {
+  display: flex;
+  font-size: 25rpx;
+  color: red;
+  margin-left: 50rpx;
+  margin-bottom: 100rpx;
+}
+
+.order-tabs{
+  width: 90%;
+  height: 60rpx;
+  display: flex;   
+  background-color: white;
+  border:1px solid #666666;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 50rpx;
+}
+
+.order-default{
+    line-height:60rpx;
+    text-align:center;
+    flex:1;
+    color:#000000;
+    font-size:22rpx;  
+}
+.order-active{
+    line-height:60rpx;
+    text-align:center;
+    color:#fc5558;
+    flex:1;
+    font-size:22rpx;
+}

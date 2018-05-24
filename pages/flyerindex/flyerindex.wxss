@@ -1,0 +1,46 @@
+/* pages/flyerindex/flyerindex.wxss */
+@import "../orderpublish/orderpublish.wxss";
+@import "../orderlist/orderlist.wxss";
+@import "../personalinformation/personalinformation.wxss";
+
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nav-tabs {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.tab-content {
+  height: 100%;
+}
+.order-publish {
+  display: flex;
+  height: 50rpx;
+  flex: 1;
+}
+
+.order-list {
+  display: flex;
+  height: 50rpx;
+  flex: 1;
+}
+
+.personal-information {
+  display: none;
+  flex: 1;
+}
+
+.scorll-view-cell-high {
+  height: 95%;
+}
+
+.scorll-view-cell-low {
+  height: 90%;
+}
+

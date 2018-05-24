@@ -1,0 +1,29 @@
+/* pages/agreement/agreement.wxss */
+.title{
+  font-size: 36rpx;
+  text-align: center;
+  color: #0AC176;
+  width: 100%;
+  display: block;
+  font-weight: bold;
+}
+.page-cont{
+  width: 100%;
+  background: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  line-height: 1.8;
+  color: #666;
+}
+.page-cont .p{
+  font-size: 28rpx;
+
+}
+.page-cont .h2 {
+  font-size: 30rpx;
+  color: #f60;
+  margin: 20rpx
+}
+.page-cont .bold{
+  font-weight: bold
+}

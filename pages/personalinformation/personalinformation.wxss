@@ -1,0 +1,106 @@
+/* pages/personalinformation/personalinformation.wxss */
+.personal-head {
+  display: flex;
+  height: 340rpx;
+  border-bottom:1px solid #eee;
+  font-size: 28rpx;
+  background: #0ac176;
+  color: #fff;
+  flex-direction: column
+}
+.balance,.score{
+  font-size: 28rpx;
+  margin-top: 10rpx
+}
+.num{
+  font-size: 40rpx;
+  margin-right:6rpx;
+  color: #efff86
+}
+.order-figure{
+  border:4px solid rgba(255,255,255,.3)
+}
+.info{
+  display: flex;
+  flex-direction: row;
+}
+.balance {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.head-image {
+  text-align: center;
+  position: relative
+}
+.head-image .rz{
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  padding:2rpx 6rpx;
+  border-radius: 6rpx;
+  font-size: 24rpx;
+  width: 110rpx;
+  bottom:0;
+  left:50%;
+  margin-left: -61rpx
+}
+.head-image view {
+  margin-top: 20rpx;
+}
+
+.head-image image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 100%;
+}
+.num-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top:0
+}
+.score {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.personal-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  background: #fff
+}
+
+.wallet {
+  display: flex;
+  flex-direction: row;
+  border-bottom:1px solid #eee; 
+  padding-bottom: 10rpx;
+}
+
+.my-score {
+  display: flex;
+  flex-direction: row;
+  border-bottom:1px solid #eee; 
+  padding-bottom: 10rpx;
+  margin-top: 20rpx;
+}
+
+.identity {
+  display: flex;
+  flex-direction: row;
+  border-bottom:1px solid #eee; 
+  margin-top: 20rpx;
+}
+.navigator-value{
+  font-size: 28rpx;
+  margin-right: 40rpx;
+  color: #0ac176;
+  font-weight: bold
+}

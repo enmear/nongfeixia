@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='align-center'><image class='img' src='../../images/index/logo.png'></image></view>
+  <view class="links" >
+    <view class='link-item jr' bindtap='jumpToFarmer'>
+      <image class='img' src='../../images/index/farmer.png'></image>
+      <text class='text'>农户</text>
+    </view>
+    <view class='link-item jr' bindtap='jumpToFly'>
+      <image class='img' src='../../images/index/feishou.png'></image>
+      <text class='text' >飞手</text>
+    </view>
+    <view class='link-item' bindtap='jumpToDealer'>
+       <text class='text'>经销商</text>
+      <image class='img' src='../../images/index/market.png'></image>      
+    </view>
+    <view class='link-item' bindtap='jumpToCommunication'>
+      <text class='text'>交流</text>   
+      <image class='img' src='../../images/index/communication.png'></image>
+    </view> 
+  </view>  
+  <text class='footer'>
+    上海冉农信息服务有限公司
+  </text>
+</view>

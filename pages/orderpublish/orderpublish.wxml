@@ -1,0 +1,144 @@
+<!--pages/orderpublish/orderpublish.wxml-->
+<!--空格采用全角空格-->
+<scroll-view scroll-y="true" class="{{scrollViewStyle}}" style='padding-bottom:200rpx'>
+  <view class="input-cell">
+    <view class="input-cell-title">
+      <text>位　　置：</text>
+    </view>
+    <view class="input-cell-content">
+      <input placeholder="请填写地址信息" bindinput='addressInput' value='{{publishForm.address}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">地　　形：</view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindTerrainPickerChange" value="{{priceArray}}" range="{{terrainArray}}">
+        <view class="date-input">{{priceArray[priceIndex].terrain}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">作　　物：</view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindCropPickerChange" value="{{priceArray[priceIndex].cropArray}}" range="{{priceArray[priceIndex].cropArray}}">
+        <view class="date-input">{{priceArray[priceIndex].cropArray[cropIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">价　　格：</view>
+    <view class="input-cell-content">
+      <input placeholder="{{priceArray[priceIndex].minPriceArray[cropIndex]}}~{{priceArray[priceIndex].maxPriceArray[cropIndex]}}" type='number' bindblur='priceInput' focus='{{focusFlag}}' value='{{publishForm.price}}'></input>
+    </view>
+    <view class="input-cell-r">
+      元/亩
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">喷洒药剂：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写需要喷洒的药剂" bindinput='medicamentInput' value='{{publishForm.medicament}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">作业日期：</view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2045-09-01" bindchange="bindDateChange">
+        <view class="date-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">作业周期：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写作业周期" bindinput='workTimeInput' value='{{publishForm.workTime}}'></input>
+    </view>
+    <view class="input-cell-r">
+      天
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">作业面积：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写作业面积" bindinput='workAreaInput' value='{{publishForm.workArea}}'></input>
+    </view>
+    <view class="input-cell-r">
+      亩
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">订单总价：</view>
+    <view class="input-cell-content">
+      <input placeholder="0" disabled='true' value='{{publishForm.orderBalance}}'></input>
+    </view>
+    <view class="input-cell-r">
+      元
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">地块分布：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写地块分布" bindinput='areaNumInput' value='{{publishForm.areaNum}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">提供便利：</view>
+    <view class="input-cell-content">
+      <input placeholder="可为飞手提供的便利" bindinput='helpInput' value='{{publishForm.help}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">联 系 人：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写联系人" bindinput='contactsInput' value='{{publishForm.contacts}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">联系电话：</view>
+    <view class="input-cell-content">
+      <input placeholder="请填写联系电话" bindinput='contactNumInput' value='{{publishForm.contactNum}}'></input>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">保证金比例：</view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindBondScalePickerChange" value="{{bondScaleArray}}" range="{{bondScaleArray}}">
+        <view class="date-input">{{bondScaleArray[bondScaleIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="input-cell">
+    <view class="input-cell-title">保证金额：</view>
+    <view class="input-cell-content">
+      <input placeholder="0" disabled='true' value='{{publishForm.bondBalance}}'></input>
+    </view>
+    <view class="input-cell-r">
+      元
+    </view>
+  </view>
+  
+  <view class="input-cell">
+    <view class="input-cell-title">土地照片：</view>
+    <view class="image-choice-content">
+      <image class="image-default image-upload" wx:for="{{imageArray}}" wx:for-index="idx" wx:for-item="itemName" wx:key="itemName" data-current="{{idx}}" src="{{itemName}}"></image>
+      <image class="image-default" src="../../images/order/add_image.png" bindtap="choiceImages"></image>
+    </view>
+  </view>
+  <view class="button-approve">
+    <button class='btn-default'  bindtap='publishSubmit'>提交审核</button>
+  </view>
+</scroll-view>

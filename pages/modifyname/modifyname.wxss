@@ -1,0 +1,24 @@
+/* pages/modifyname/modifyname.wxss */
+.input-cell{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff
+}
+
+.input-cell-title {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #666
+}
+
+.input-cell-content {
+  font-size: 28rpx;
+}
+
+.button-submit {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}

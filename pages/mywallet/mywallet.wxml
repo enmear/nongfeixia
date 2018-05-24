@@ -1,0 +1,23 @@
+<!--pages/mywallet/mywallet.wxml-->
+<scroll-view scroll-y="true">
+  <view class="wallet-head">
+    <view>余额（元）</view>
+    <view class='num'>{{userInfo.walletBalance}}</view>
+  </view>
+  <view class='btn-group'>
+    <view class="button">  
+      <button class='btn'   bindtap="incomeRecord"><view class='iconfont icon-shourumingxi green'></view>收入记录</button>
+    </view>
+    <view class="button">
+      <button class='btn'    bindtap="payRecord"><view class='iconfont icon-0003 red'></view>支出记录</button>
+    </view>
+  </view>
+  <view class='btn-group'>
+    <view class="button">
+      <button class='btn'    bindtap="bondRecord"><view class='iconfont icon-iconfontbao blue'></view>保证金</button>
+    </view>
+    <view class="button">
+      <button class='btn'    bindtap="applyWithdrawals"><view class='iconfont icon-tixian-copy orange'></view>申请提现          </button>
+    </view>
+  </view>
+</scroll-view>

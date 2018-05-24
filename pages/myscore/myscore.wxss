@@ -1,0 +1,29 @@
+/* pages/myscore/myscore.wxss */
+.score-page{
+  width: 100%;
+}
+.score-head {
+  display: flex;
+  height: 200rpx;
+  flex-direction: column;
+  text-align: center;
+  margin-top:40rpx;
+  font-size: 30rpx;
+  color:#666;
+}
+.num{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #f30
+}
+.score-head view {
+  margin-top:20rpx;
+}
+
+.score-explain {
+  font-size: 28rpx;
+  line-height: 1.6;
+  background: #fff;
+  padding: 30rpx;
+  color: #666 
+}

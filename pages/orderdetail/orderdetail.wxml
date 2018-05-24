@@ -1,0 +1,107 @@
+<!--pages/orderdetail/orderdetail.wxml-->
+<scroll-view scroll-y="true">
+  <!-- <image class="head-image" src="{{orderInfo.image}}"></image>
+  <view class="order-head">
+    <view class="icon">
+      <image class="icon-image" ></image>
+      <view>{{orderInfo.crop}}喷药</view>
+    </view>
+    <view class="price">
+      <view>{{orderInfo.price}}元</view>
+      <view>价格（/亩）</view>
+    </view>
+    <view class="area">
+      <view>{{orderInfo.work_area}}亩</view>
+      <view>作业面积</view>
+    </view>
+  </view> -->
+<image class='banner' src="{{orderInfo.image}}"></image>
+<view class='detail-header cell'>
+  <image class='img' src="{{orderInfo.image}}"></image>
+  <view class='text-tit'>
+    <text class='title'>{{orderInfo.crop}}喷药</text>
+    <view class='price'>
+      <text class='red'>￥</text>
+      <text class='lg-t red'>{{orderInfo.price}} </text>
+      <text> /亩 </text>
+    </view>
+    <view class='acreage'>
+     <text>{{orderInfo.work_area}}</text>
+     <text>亩</text>
+    </view>  
+  </view>
+</view>
+  <view class="order-body">
+    <view class="order-body-item cell">
+      <view>订单金额：</view>
+      <view>{{orderInfo.order_balance}}元</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>作业日期：</view>
+      <view>{{orderInfo.work_date}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>作业周期：</view>
+      <view>{{orderInfo.work_time}}天</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>地理位置：</view>
+      <view>{{orderInfo.address}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>地块分布：</view>
+      <view>{{orderInfo.land_num}}块地</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>提供便利：</view>
+      <view>{{orderInfo.help}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>保证金：</view>
+      <view>{{orderInfo.bond_scale}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>保证金额：</view>
+      <view>{{orderInfo.bond_balance}}元</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>联系人：</view>
+      <view>{{orderInfo.contacts}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>联系电话：</view>
+      <view>{{orderInfo.contact_num}}</view>
+    </view>
+    <view class="order-body-item cell">
+      <view>订单状态：</view>
+      <view>{{orderStatus}}</view>
+    </view>
+  </view>
+  
+
+  <view class="{{buttonStyle}}">
+    <button class='btn' bindtap='submit' data-statu="open">{{buttonName}}</button>
+  </view>
+</scroll-view>
+
+<!--支付选项弹窗-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" data-showtype='0' wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+  <view class="drawer_title">支付方式</view>
+  <view class="{{payWayBtn}}" bindtap="powerDrawer" data-paytype="0" data-showtype='0'>{{payWayTips}}</view>
+  <view class="btn_ok" bindtap="powerDrawer" data-paytype="1" data-showtype='0'>微信支付</view>
+</view>
+
+<!--订单完成弹窗-->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" data-showtype='1' wx:if="{{showDoneDiaog}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showDoneDiaog}}">
+  <view class="drawer_title">请上传飞行线路图</view>
+  <view class="fly_image">
+    <image src="{{flyImageUrl}}" bindtap="choiceImages" wx:if="{{flyImageUrl}}"></image>
+  </view>
+  <view class="btn_ok" bindtap="doneSubmit" data-showtype='1'>确认完成</view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/myscore/myscore.wxml-->
+<scroll-view scroll-y="true" class="score-page">
+  <view class="score-head">
+    <view>当前积分</view>
+    <view class='num'>{{userInfo.score}}</view>
+  </view>
+
+  <view class="score-explain">
+    这里是积分规则说明：\n这里是积分规则说明这里是积分规则说明这里是积分规则说明这里是积分规则说明
+  </view>
+</scroll-view>

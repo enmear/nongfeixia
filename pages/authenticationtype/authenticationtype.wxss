@@ -1,0 +1,34 @@
+/* pages/authenticationtype/authenticationtype.wxss */
+.current-identity {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80rpx;
+  margin-left: 40rpx;
+}
+.current-identity{
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx
+}
+.current-identity .name{
+  color: #f60;
+  font-weight: bold
+}
+.button {
+  width: 60%;
+  margin-top: 80rpx;
+  margin-left: 20%; 
+}
+.btn{
+  background: #fff;
+  line-height: 1.5;
+  padding: 40rpx 0
+}
+.iconfont{
+  font-size: 60rpx;
+  color: #0ac176
+}
+.text{
+  font-size: 30rpx;
+  color: #666
+}

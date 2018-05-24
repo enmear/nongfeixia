@@ -1,0 +1,60 @@
+/* pages/personalauthentication/personalauthentication.wxss */
+.input-cell{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.input-cell-title {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #666
+}
+
+.input-cell-content {
+  font-size: 28rpx;
+}
+
+.id-photo {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 40rpx;
+}
+
+.id-photo-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 40rpx; 
+  font-size: 28rpx;
+}
+
+.id-photo-image {
+  width: 220rpx;
+  height: 170rpx;
+  margin-bottom: 20rpx;
+}
+
+.tips {
+  font-size: 28rpx;
+  color: red;
+  margin-top: 40rpx;
+  margin-left: 5%;
+}
+
+.button-submit {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.button-submit-hidden {
+  display: none
+}
+.btn-default{
+  background: #0ac176;
+  color: #fff
+}

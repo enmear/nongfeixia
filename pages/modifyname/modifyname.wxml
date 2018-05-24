@@ -1,0 +1,13 @@
+<!--pages/modifyname/modifyname.wxml-->
+<view class="input-cell cell">
+  <view class="input-cell-title">
+    <text>姓名：</text>
+  </view>
+  <view class="input-cell-content">
+    <input placeholder='{{userInfo.authStatus === "0" ? "请填写真实姓名" : userInfo.realName}}' bindinput='realNameInput'></input>
+  </view>
+</view>
+
+<view class="button-submit">
+  <button class='btn' bindtap='sumbit'>提交</button>
+</view>

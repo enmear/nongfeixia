@@ -1,0 +1,75 @@
+/* pages/orderpublish/orderpublish.wxss */
+
+.input-cell {
+  display: flex;
+  flex-direction: row;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  margin-left: 5%;
+  width: 90%;
+  border-bottom: 1rpx solid #eee;
+  align-items: center;
+}
+
+.input-cell-title {
+  width: 180rpx;
+  margin-right: 10rpx;
+  font-size: 28rpx;
+  color: #333
+}
+
+.input-cell-content {
+  font-size: 28rpx; 
+}
+
+.input-cell-r{
+ position: absolute;
+  right: 40rpx;
+  font-size: 28rpx;
+  color: #999
+}
+
+.button-approve {
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.picker {
+  padding: 19rpx 26rpx;
+  background-color: #fff;
+}
+
+.date-input {
+  height: 50rpx;
+  width: 400rpx;
+  min-height: 50rpx;
+  line-height: 50rpx;
+  font-size: 28rpx;
+}
+
+.image-choice-content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.image-default{    
+   width: 120rpx;
+  height: 120rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+  border:1px solid #ddd;
+  border-radius: 4rpx
+}
+.image-upload{
+  padding: 10rpx;
+  box-sizing: border-box
+}
+.btn-default{
+  background: #0ac176;
+  color: #fff
+}
+
